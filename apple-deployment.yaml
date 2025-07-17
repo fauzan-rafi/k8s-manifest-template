@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: fruit
+  name: fruit
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fruit
+  template:
+    metadata:
+      labels:
+        app: fruit
+    spec:
+      containers:
+      - image: hashicorp/http-echo
+        name: http-echo
+        args: ["-text=apple"]

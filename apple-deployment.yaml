@@ -18,4 +18,4 @@ spec:
       containers:
       - image: hashicorp/http-echo
         name: http-echo
-        args: ["-text=apple"]
+        args: ["-text=pinapple"]

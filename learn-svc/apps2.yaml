@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ubuntu-nginx-client
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: custom-web
+  template:
+    metadata:
+      labels:
+        app: custom-web
+    spec:
+      containers:
+      - name: web-container
+        image: fauzancloud/custom-ubuntu-nginx:v1
+        ports:
+        - containerPort: 80

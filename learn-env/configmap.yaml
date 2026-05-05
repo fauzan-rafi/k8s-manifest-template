@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: contoh-configmap
+data:
+  API_TIMEOUT: "30s"
+  FEATURE_FLAG_NEW_UI: "true"
+  LOG_LEVEL: "debug"

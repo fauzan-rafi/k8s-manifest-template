@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: latihan-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: container-ku
+  template:
+    metadata:
+      labels:
+        app: container-ku
+    spec:
+      containers:
+      - name: container-ku
+        image: fauzancloud/custom-ubuntu-nginx:v1
+        envFrom:
+        - configMapRef:
+            name: contoh-configmap
+        - secretRef:
+            name: contoh-secret

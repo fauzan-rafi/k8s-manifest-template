@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-benar
+  namespace: latihan-devops
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web-benar
+  template:
+    metadata:
+      labels:
+        app: web-benar
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:stable-alpine
+        resources:
+          requests:
+            cpu: "250m"      # Meminta 0.25 core
+            memory: "128Mi"  # Meminta 128MB RAM
+          limits:
+            cpu: "500m"      # Batas maksimal 0.5 core
+            memory: "256Mi"  # Batas maksimal 256MB RAM

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: (nama panggilan)-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: (nama panggilan)-deployment
+  template:
+    metadata:
+      labels:
+        app: (nama panggilan)-deployment
+    spec:
+      containers:
+      - name: (nama panggilan)-pod
+        image: fauzancloud/color-app:v1
+        ports:
+          - containerPort: 80

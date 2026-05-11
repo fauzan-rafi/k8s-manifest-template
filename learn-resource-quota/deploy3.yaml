@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-outof
+  namespace: latihan-devops
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web-outof
+  template:
+    metadata:
+      labels:
+        app: web-outof
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:stable-alpine
+        resources:
+          requests:
+            cpu: "5"         # Melebihi ResourceQuota (max: 1)
+            memory: "4Gi"    # Melebihi ResourceQuota (max: 1Gi)
+          limits:
+            cpu: "10"
+            memory: "8Gi"

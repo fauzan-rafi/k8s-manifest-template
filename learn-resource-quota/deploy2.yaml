@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-bebas
+  namespace: latihan-devops
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web-bebas
+  template:
+    metadata:
+      labels:
+        app: web-bebas
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:stable-alpine
+        # Tidak ada section resources sama sekali

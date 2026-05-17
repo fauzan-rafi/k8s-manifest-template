@@ -1,19 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: (nama panggilan)-deployment
+  name: exercise-deploy-(nama student)
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: (nama panggilan)-deployment
+      app: exercise-deploy-(nama student)
   template:
     metadata:
       labels:
-        app: (nama panggilan)-deployment
+        app: exercise-deploy-(nama student)
     spec:
       containers:
-      - name: (nama panggilan)-pod
-        image: fauzancloud/color-app:v1
+      - name: exercise-deploy-(nama student)
+        image: hashicorp/http-echo
+        args: ["-text=Halo dari Echo Server (nama student)!"]
         ports:
-          - containerPort: 80
+        - containerPort: 5678

@@ -6,7 +6,7 @@ metadata:
 spec:
   ingressClassName: traefik # Tidak boleh diganti
   rules:
-  - host: rafi.apps.k3s.zauqilab.com # ganti rafi dengan nama panggilan anda
+  - host: rafi.exercise.apps.k3s.zauqilab.com # ganti rafi dengan nama panggilan anda
     http:
       paths:
       - path: /

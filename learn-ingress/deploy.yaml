@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: exercise-deploy-(nama student)
+  name: exercise-deploy-(nama panggilan)
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: exercise-deploy-(nama student)
+      app: exercise-deploy-(nama panggilan)
   template:
     metadata:
       labels:
-        app: exercise-deploy-(nama student)
+        app: exercise-deploy-(nama panggilan)
     spec:
       containers:
-      - name: exercise-deploy-(nama student)
+      - name: exercise-deploy-(nama panggilan)
         image: hashicorp/http-echo
-        args: ["-text=Halo dari Echo Server (nama student)!"]
+        args: ["-text=Halo dari Echo Server (nama panggilan)!"]
         ports:
         - containerPort: 5678

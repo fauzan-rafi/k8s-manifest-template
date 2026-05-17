@@ -1,18 +1,17 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: (nama ingress anda)
-  namespace: student-workspace
+  name: exercise-ingress-(nama panggilan)
 spec:
   ingressClassName: traefik # Tidak boleh diganti
   rules:
-  - host: rafi.exercise.apps.k3s.zauqilab.com # ganti rafi dengan nama panggilan anda
+  - host: (nama panggilan).exercise.apps.k3s.zauqilab.com # ganti nama panggilan anda
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: (nama service anda)
+            name: exercise-svc-(nama panggilan)
             port:
               number: 80

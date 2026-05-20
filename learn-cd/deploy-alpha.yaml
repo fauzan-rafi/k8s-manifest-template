@@ -18,3 +18,4 @@ spec:
       containers:
         - name: (nama panggilan)-deploy-alpha-cd
           image: registry.gitlab.com/tutorial-ci-dibimbing/phase-4-cd:alpha # Sesuaikan nama image anda, dapat dilihat pada proses build
+        imagePullPolicy: Always

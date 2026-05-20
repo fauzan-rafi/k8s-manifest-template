@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: (nama panggilan)-deploy-prod-cd
+  namespace: student-cd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: (nama panggilan)-deploy-prod-cd
+  template:
+    metadata:
+      labels:
+        app: (nama panggilan)-deploy-prod-cd
+    spec:
+      imagePullSecrets:
+        - name: mentor-pull-secret
+      containers:
+        - name: (nama panggilan)-deploy-prod-cd
+          image: registry.gitlab.com/tutorial-ci-dibimbing/phase-4-cd:beta # Sesuaikan nama image anda, dapat dilihat pada proses build

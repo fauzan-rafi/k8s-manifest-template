@@ -4,7 +4,7 @@ metadata:
   name: (nama panggilan)-deploy-alpha-cd
   namespace: student-cd
 spec:
- replicas: 1
+  replicas: 1
   selector:
     matchLabels:
       app: (nama panggilan)-deploy-alpha-cd

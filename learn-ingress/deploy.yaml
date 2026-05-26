@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: exercise-deploy-(nama panggilan)
+  name: (ganti sesuai format yang diminta)
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: exercise-deploy-(nama panggilan)
+      app: (ganti sesuai format yang diminta)
   template:
     metadata:
       labels:
-        app: exercise-deploy-(nama panggilan)
+        app: (ganti sesuai format yang diminta)
     spec:
       containers:
-      - name: exercise-deploy-(nama panggilan)
+      - name: (ganti sesuai format yang diminta)
         image: hashicorp/http-echo
         args: ["-text=Halo dari Echo Server (nama panggilan)!"]
         ports:

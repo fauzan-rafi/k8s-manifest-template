@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: exercise-svc-(nama student)
+  name: (ganti sesuai dengan format yg diminta)
 spec:
   selector:
-    app: exercise-deploy-(nama panggilan).
+    app: (ganti sesuai dengan format yg diminta)
   ports:
     - port: 80
       targetPort: 5678
